@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>示例角色在阳光明媚的花园中阅读 - 图片生成 Prompt 文档</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d2433;
+      --muted: #667085;
+      --line: #d8dee8;
+      --paper: #ffffff;
+      --soft: #f5f7fb;
+      --accent: #2f6f9f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #eef2f7;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.65;
+    }
+    main {
+      width: min(1080px, calc(100% - 32px));
+      margin: 32px auto 56px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 36px;
+      box-shadow: 0 18px 50px rgba(20, 31, 56, 0.12);
+    }
+    h1, h2 { line-height: 1.25; }
+    h1 { margin: 0 0 10px; font-size: 34px; }
+    h2 { margin: 36px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--line); font-size: 24px; }
+    p { margin: 0 0 14px; }
+    .lead { color: var(--muted); }
+    .notice {
+      margin-top: 18px;
+      padding: 12px 14px;
+      border: 1px solid #b8d9ff;
+      border-radius: 8px;
+      background: #eef6ff;
+      color: #1d4f7a;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .meta span {
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    pre {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      margin: 0;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #111827;
+      color: #f8fafc;
+      font-size: 14px;
+      line-height: 1.7;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .reference-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .reference-card {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--soft);
+    }
+    .reference-card img {
+      display: block;
+      width: 100%;
+      max-height: 360px;
+      object-fit: contain;
+      background: #10141f;
+    }
+    figcaption {
+      display: grid;
+      gap: 4px;
+      padding: 12px;
+      background: #fff;
+    }
+    figcaption em {
+      color: #2f6f9f;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 700;
+    }
+    figcaption span { color: var(--muted); font-size: 14px; }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 8px; }
+    @media print {
+      body { background: #fff; }
+      main { width: 100%; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>图片生成 Prompt 文档</h1>
+    <p class="lead">主题：示例角色在阳光明媚的花园中阅读</p>
+    <div class="meta">
+      <span>通用中文说明书</span>
+      <span>画幅：3:2</span>
+      <span>角色/对象：示例角色</span>
+    </div>
+    <p class="notice">这是自包含 HTML：参考图已经以压缩 base64 数据嵌入文件。参考图按排序使用，二次元/原作图是身份根参考，先锁定脸型轮廓、五官气质、眉眼神态、表情习惯、身形姿态和动作节奏；发型、服装、乐器与随身物件按场景辅助调整，不要用乐器、包、衣服颜色替代人物本身的辨识；实际给外部模型生图时，仍建议复制 Prompt，并把参考图作为图片附件上传。</p>
+
+    <h2>Prompt</h2>
+    <pre>一个东亚少女，16-19岁，柔软圆润的面部骨相，坐在阳光明媚的花园长椅上阅读书籍。柔和的自然光线，清透的皮肤质感，温暖的色调。她穿着简约的白色连衣裙，长发随风轻拂。背景是盛开的花朵和绿植。风格：社交媒体生活照，真实感，可爱自然。画幅：3:2。</pre>
+
+    <h2>Negative Prompt</h2>
+    <pre>避免过度修图、美颜滤镜感；避免欧美成熟女性脸型；避免疲惫、憔悴、法令纹；避免廉价假发、漫展摆拍感；避免冷淡纪实风格；避免多人同脸；避免过度饱和或灰暗色调。</pre>
+
+    <h2>参考图</h2>
+    <div class="reference-grid">
+      <figure class="reference-card">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAoACgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYI4Q/SFhSRFEiO0NVJjFFRkZUKjdDYWIzR2R1Y2UVFhcmQ0VERUZHRkpLTE1OT1BRUlNUVVZXWFlaW1xdXl9gYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXp7fH1+f4CBgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrrK2ur7CxsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7P0NHS09TV1tfa2drb3N3e3+Dh4uPk5ebn6Onq6+zt7u/w8fLz9PX29/j5+vv8/f7/2gAMAwEAAhEDEQA/AP8AqvRRRQB//9k=" alt="sample_character_portrait">
+        <figcaption>
+          <strong>1. sample_character_portrait</strong>
+          <em>身份根参考</em>
+          <span>角色肖像，用于锁定脸型轮廓、五官气质</span>
+          <code>assets/references/sample_character_portrait.jpg</code>
+        </figcaption>
+      </figure>
+    </div>
+
+    <h2>完整规格 Prompt</h2>
+    <pre>一个东亚少女，16-19岁，柔软圆润的面部骨相，坐在阳光明媚的花园长椅上阅读书籍。柔和的自然光线，清透的皮肤质感，温暖的色调。她穿着简约的白色连衣裙，长发随风轻拂。背景是盛开的花朵和绿植。风格：社交媒体生活照，真实感，可爱自然。画幅：3:2。参考图：sample_character_portrait（身份根参考，锁定脸型轮廓、五官气质、眉眼神态、表情习惯、身形姿态和动作节奏）。</pre>
+
+    <h2>质检提示</h2>
+    <ul><li>未发现明显缺口。</li></ul>
+  </main>
+</body>
+</html>

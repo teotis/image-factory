@@ -1,0 +1,16 @@
+{
+  "images": [
+    {
+      "id": "sample_character_portrait",
+      "source": "Sample Image #1",
+      "path": "assets/references/sample_character_portrait.jpg",
+      "width": 800,
+      "height": 1000,
+      "characters": ["示例角色", "Sample Character"],
+      "groups": ["Sample"],
+      "roles": ["character", "portrait", "face"],
+      "priority": 100,
+      "notes": "示例角色肖像：用于演示参考图功能。"
+    }
+  ]
+}
