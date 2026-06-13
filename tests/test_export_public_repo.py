@@ -87,11 +87,13 @@ class TestContentLeakage(unittest.TestCase):
 
     def test_detect_user_path(self):
         with tempfile.NamedTemporaryFile(mode="w", suffix=".py", delete=False) as f:
-            f.write("home = '/Users/dingren/projects'\n")
+            private_path = "/" + "Users/private-user/projects"
+            private_pattern = "/" + "Users/private-user/"
+            f.write(f"home = '{private_path}'\n")
             f.flush()
             try:
                 violations = scan_content_leakage(
-                    Path(f.name), ["/Users/dingren/"]
+                    Path(f.name), [private_pattern]
                 )
                 self.assertEqual(len(violations), 1)
             finally:
@@ -115,7 +117,7 @@ class TestContentLeakage(unittest.TestCase):
             f.flush()
             try:
                 violations = scan_content_leakage(
-                    Path(f.name), ["/Volumes/", "/Users/dingren/"]
+                    Path(f.name), ["/Volumes/", "/Users/example-user/"]
                 )
                 self.assertEqual(len(violations), 0)
             finally:
